@@ -97,7 +97,7 @@ async function processBinFiles() {
       console.log(`Executing: ./asc2bin.exe ${args.join(' ')}`);
 
       try {
-        const { stdout, stderr } = await execFilePromise('./asc2bin.exe', args);
+        const { stdout, stderr } = await execFilePromise('./asc2bin', args);
         if (stdout) console.log(`stdout: ${stdout}`);
         if (stderr) console.error(`stderr: ${stderr}`);
       } catch (error) {
